@@ -5,11 +5,13 @@ import './Reservations.css'
 const Reservations = ({ reservations, cancelRes }) => {
   const resCards = reservations.map( reservation => {
     return <ReservationCard
-      name={reservation.name} 
-      date={reservation.date}
-      time={reservation.time}
-      number={reservation.number}
-      cancelRes={cancelRes}
+    id={reservation.id}
+    name={reservation.name} 
+    date={reservation.date}
+    time={reservation.time}
+    number={reservation.number}
+    cancelRes={cancelRes}
+    key={reservation.id}
     />
   })
 
